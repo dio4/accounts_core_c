@@ -5,7 +5,7 @@ void show_account( FILE *readPtr )
    struct clientData client = { 0, "", "", 0.0 };
 
    /*if ( ( writePtr = fopen( "accounts.txt", "w" ) ) == NULL )
-      printf( "File could not be opened.\n" );
+      printf( "File could not be opened.\n" );  что-то не понравилось тут
    else { */
       rewind( readPtr );
       printf( "%-6s%-16s%-11s%10s\n", 
