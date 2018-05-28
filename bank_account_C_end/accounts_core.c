@@ -24,7 +24,7 @@ void textFile( FILE * );
 void updateRecord( FILE * );
 void newRecord( FILE * );
 void deleteRecord( FILE * );
-void show_account(FILE *); //стр 206
+void show_account(FILE *); 
 
 
 int main()
@@ -36,11 +36,11 @@ int main()
       printf( "не могу открыть файл.\n" );
    else { 
 
-      while ( ( choice = enterChoice() ) != 6 ) { //enterChoice() стр 166
+      while ( ( choice = enterChoice() ) != 6 ) { // см. enterChoice() 
 
          switch ( choice ) { 
             case 1:
-               textFile( cfPtr );//стр55
+               textFile( cfPtr );
                break;
             case 2:
                updateRecord( cfPtr );
@@ -153,13 +153,13 @@ void deleteRecord( FILE *fPtr )//принимает указатель на "cre
          ( accountNum - 1 ) * sizeof( struct clientData ), 
          SEEK_SET );
       fwrite( &blankClient, 
-              sizeof( struct clientData ), 1, fPtr );//записываем пустой аккаунт на место, соответств. введенному номеру
+              sizeof( struct clientData ), 1, fPtr ); //записываем пустой аккаунт на место, соответств. введенному номеру
    }
 }
 
-void newRecord( FILE *fPtr )//принимает указатель на "credit.dat"
+void newRecord( FILE *fPtr ) //принимает указатель на "credit.dat"
 { 
-   struct clientData client = { 0, "", "", 0.0 };//созд. переменнная типа struct clientData с пустыми параментрами
+   struct clientData client = { 0, "", "", 0.0 }; //созд. переменнная типа struct clientData с пустыми параментрами
    int accountNum;
    printf( "Введите новый номер аккаунта ( 1 - 100 ): " );
    //scanf( "%d", &accountNum );
