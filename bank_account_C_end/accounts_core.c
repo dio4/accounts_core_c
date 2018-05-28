@@ -9,7 +9,7 @@
 //добавить избирательную сортировку(напр. по размеру вклада, по имени, по N аккаунта) и поиск.
 
 #include <stdio.h>
-/*в файле "credit.dat" (см. Fig11_11.c) создается 100 пустых переменных blankClient типа struct clientData */
+/*в файле "credit.dat" создается 100 пустых переменных blankClient типа struct clientData */
 struct clientData { 
    int acctNum;
    char lastName[ 15 ];
